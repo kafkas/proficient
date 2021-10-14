@@ -2,7 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "build": "npx lerna run compile"
+    "build": "npx lerna run compile",
+    "format": "prettier --write \"./packages/**/{src,test}/**/*.{ts,js}\"",
+    "format-check": "prettier --check \"./packages/**/{src,test}/**/*.{ts,js}\"",
+    "lint": "npx eslint . --ext .ts --ignore-pattern \"packages/**/lib\""
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
