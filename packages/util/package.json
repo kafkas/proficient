@@ -22,6 +22,8 @@
     "url": "git+https://github.com/kafkas/proficient.git"
   },
   "scripts": {
+    "compile": "yarn compile:src",
+    "compile:src": "tsc -p src",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

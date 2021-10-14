@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "build": "npx lerna run compile"
+  },
   "devDependencies": {
     "lerna": "^4.0.0",
     "typescript": "4.4.3"
