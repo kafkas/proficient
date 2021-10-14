@@ -5,6 +5,9 @@
     "build": "npx lerna run compile"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
     "lerna": "^4.0.0",
     "typescript": "4.4.3"
   }
