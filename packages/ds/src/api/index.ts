@@ -1,1 +1,2 @@
-export { SLLQueue } from './SLLQueue';
+export { Collection } from './Collection';
+export { Queue } from './Queue';
