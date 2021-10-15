@@ -1,9 +1,10 @@
 {
-  "name": "@proficient/util",
-  "version": "0.1.0",
-  "description": "Utilities",
+  "name": "ds",
+  "version": "0.0.0",
+  "description": "Data structures",
   "keywords": [
-    "util"
+    "data",
+    "structures"
   ],
   "author": "Anar Kafkas <anarkafkas@gmail.com>",
   "homepage": "https://github.com/kafkas/proficient",
