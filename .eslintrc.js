@@ -16,5 +16,12 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'prettier'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': [
+      2,
+      {
+        allowExpressions: true,
+      },
+    ],
+  },
 };
