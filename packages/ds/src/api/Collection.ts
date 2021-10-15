@@ -2,10 +2,10 @@ export interface Collection<E> extends Iterable<E> {
   /**
    * A non-negative integer indicating the number of elements in the collection.
    */
-  readonly size: number;
+  readonly count: number;
 
   /**
-   * A boolean indicating whether the collection is empty, i.e. its size equals 0.
+   * A boolean indicating whether the collection is empty.
    */
   readonly isEmpty: boolean;
 

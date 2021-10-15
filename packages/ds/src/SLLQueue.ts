@@ -16,17 +16,17 @@ class SLLNode<E> {
 export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   #top: SLLNode<E> | null;
   #bottom: SLLNode<E> | null;
-  #itemCount: number;
+  #count: number;
 
-  public get size(): number {
-    return this.#itemCount;
+  public get count(): number {
+    return this.#count;
   }
 
   public constructor() {
     super();
     this.#top = null;
     this.#bottom = null;
-    this.#itemCount = 0;
+    this.#count = 0;
   }
 
   public *[Symbol.iterator](): Iterator<E> {
@@ -42,7 +42,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   public clear(): void {
     this.#top = null;
     this.#bottom = null;
-    this.#itemCount = 0;
+    this.#count = 0;
   }
 
   public enqueue(element: E): void {
@@ -55,7 +55,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
       this.#top.next = newNode;
       this.#top = this.#top.next;
     }
-    this.#itemCount++;
+    this.#count++;
   }
 
   public dequeue(): E {
@@ -63,7 +63,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
     this.assertNode(this.#bottom);
     const bottomElement = this.#bottom.data;
     this.#bottom = this.#bottom.next;
-    this.#itemCount--;
+    this.#count--;
     return bottomElement;
   }
 

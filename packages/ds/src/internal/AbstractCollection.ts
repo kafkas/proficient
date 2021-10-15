@@ -4,11 +4,11 @@ import { ImplementationError } from '../internal/ImplementationError';
 
 export abstract class AbstractCollection<E> implements Collection<E> {
   public get isEmpty(): boolean {
-    return this.size === 0;
+    return this.count === 0;
   }
 
   public toArray(): E[] {
-    const arr = new Array<E>(this.size);
+    const arr = new Array<E>(this.count);
     let i = 0;
     for (const elem of this) {
       arr[i++] = elem;
@@ -24,7 +24,7 @@ export abstract class AbstractCollection<E> implements Collection<E> {
     throw new ImplementationError();
   }
 
-  public abstract size: number;
+  public abstract count: number;
 
   public abstract [Symbol.iterator](): Iterator<E>;
 
