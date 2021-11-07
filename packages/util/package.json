@@ -23,7 +23,8 @@
   },
   "scripts": {
     "compile": "yarn compile:src",
-    "compile:src": "tsc -p src"
+    "compile:src": "tsc -p src",
+    "test": "npx jest --verbose"
   },
   "publishConfig": {
     "access": "public"

@@ -8,13 +8,21 @@
     "lint": "npx eslint . --ext .ts --ignore-pattern \"packages/**/lib\""
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "babel-jest": "^27.0.6",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.0.6",
     "lerna": "^4.0.0",
     "prettier": "2.4.1",
+    "ts-node": "^10.0.0",
     "typescript": "4.4.3"
   }
 }
