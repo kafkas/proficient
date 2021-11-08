@@ -30,7 +30,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   }
 
   public *[Symbol.iterator](): Iterator<E> {
-    let cur = this.#top;
+    let cur = this.#bottom;
 
     while (cur !== null) {
       const curElement = cur;
