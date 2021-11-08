@@ -1,6 +1,6 @@
 {
   "name": "@proficient/util",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "High-quality and essential Typescript utilities",
   "keywords": [
     "typescript",
