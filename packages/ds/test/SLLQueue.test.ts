@@ -142,4 +142,14 @@ describe('SLLQueue', () => {
       expect(q.peek()).toBe(1);
     });
   });
+
+  describe('on items cleared', () => {
+    test('is empty', () => {
+      const q = new SLLQueue<number>();
+      q.enqueue(1);
+      q.enqueue(2);
+      q.clear();
+      expect(q.isEmpty).toBe(true);
+    });
+  });
 });
