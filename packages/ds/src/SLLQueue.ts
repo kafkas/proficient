@@ -59,7 +59,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   }
 
   public dequeue(): E {
-    this.#validateNonEmptyQueue();
+    this.#validateQueueIsNotEmpty();
     this.#assertNode(this.#bottom);
     const bottomElement = this.#bottom.data;
     this.#bottom = this.#bottom.next;
@@ -74,12 +74,12 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   }
 
   public peek(): E {
-    this.#validateNonEmptyQueue();
+    this.#validateQueueIsNotEmpty();
     this.#assertNode(this.#bottom);
     return this.#bottom.data;
   }
 
-  #validateNonEmptyQueue(): void {
+  #validateQueueIsNotEmpty(): void {
     if (this.isEmpty) {
       this.throwEmptyCollectionError();
     }
