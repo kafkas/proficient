@@ -1,5 +1,5 @@
 import { SLLQueue } from '../src';
-import { EmptyCollectionError } from './internal/EmptyCollectionError';
+import { EmptyCollectionError } from '../src/internal/EmptyCollectionError';
 
 describe('SLLQueue', () => {
   describe('on initialization', () => {

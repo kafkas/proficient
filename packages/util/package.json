@@ -22,8 +22,9 @@
     "url": "git+https://github.com/kafkas/proficient.git"
   },
   "scripts": {
-    "compile": "yarn compile:src",
-    "compile:src": "tsc -p src",
+    "compile": "yarn compile:src && yarn compile:test",
+    "compile:src": "npx tsc -p src",
+    "compile:test": "npx tsc -p test",
     "test": "npx jest --verbose"
   },
   "publishConfig": {

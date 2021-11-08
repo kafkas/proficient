@@ -1,4 +1,4 @@
-import { registerInterval, sleep } from '.';
+import { registerInterval, sleep } from '..';
 
 describe('registerInterval', () => {
   describe('runs interval enough times', () => {
