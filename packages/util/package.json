@@ -1,8 +1,13 @@
 {
   "name": "@proficient/util",
   "version": "0.1.0",
-  "description": "Utilities",
+  "description": "High-quality and essential Typescript utilities",
   "keywords": [
+    "typescript",
+    "javascript",
+    "utilities",
+    "utility functions",
+    "utils",
     "util"
   ],
   "author": "Anar Kafkas <anarkafkas@gmail.com>",
