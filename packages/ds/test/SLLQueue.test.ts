@@ -109,19 +109,23 @@ describe('SLLQueue', () => {
 
     test('respects FIFO order', () => {
       const q = new SLLQueue<number>();
+      const dequeuedItems: number[] = [];
+
       q.enqueue(1);
       q.enqueue(2);
       q.enqueue(3);
 
-      expect(q.dequeue()).toBe(1);
-      expect(q.dequeue()).toBe(2);
+      dequeuedItems.push(q.dequeue());
+      dequeuedItems.push(q.dequeue());
 
       q.enqueue(4);
       q.enqueue(5);
 
-      expect(q.dequeue()).toBe(3);
-      expect(q.dequeue()).toBe(4);
-      expect(q.dequeue()).toBe(5);
+      dequeuedItems.push(q.dequeue());
+      dequeuedItems.push(q.dequeue());
+      dequeuedItems.push(q.dequeue());
+
+      expect(dequeuedItems).toEqual([1, 2, 3, 4, 5]);
     });
   });
 
