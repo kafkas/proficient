@@ -39,12 +39,24 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
     }
   }
 
+  /**
+   * @remarks
+   *
+   * - Time complexity: _O_(1)
+   * - Space complexity: _O_(1)
+   */
   public clear(): void {
     this.#top = null;
     this.#bottom = null;
     this.#count = 0;
   }
 
+  /**
+   * @remarks
+   *
+   * - Time complexity: _O_(1)
+   * - Space complexity: _O_(1)
+   */
   public enqueue(element: E): void {
     const newNode = new SLLNode(element);
     if (this.isEmpty) {
@@ -58,6 +70,12 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
     this.#count++;
   }
 
+  /**
+   * @remarks
+   *
+   * - Time complexity: _O_(1)
+   * - Space complexity: _O_(1)
+   */
   public dequeue(): E {
     this.#validateQueueIsNotEmpty();
     this.#assertNode(this.#bottom);
@@ -73,6 +91,12 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
     }
   }
 
+  /**
+   * @remarks
+   *
+   * - Time complexity: _O_(1)
+   * - Space complexity: _O_(1)
+   */
   public peek(): E {
     this.#validateQueueIsNotEmpty();
     this.#assertNode(this.#bottom);

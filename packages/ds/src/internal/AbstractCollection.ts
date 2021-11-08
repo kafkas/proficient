@@ -7,6 +7,18 @@ export abstract class AbstractCollection<E> implements Collection<E> {
     return this.count === 0;
   }
 
+  /**
+   * @remarks
+   *
+   * - Time complexity: _O_(_N_)
+   * - Space complexity: _O_(_N_)
+   *
+   * where:
+   *
+   * - _N_: number of items in the collection
+   *
+   * @returns A new array containing all the items in the collection.
+   */
   public toArray(): E[] {
     const arr = new Array<E>(this.count);
     let i = 0;
