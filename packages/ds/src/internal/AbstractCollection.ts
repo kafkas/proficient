@@ -10,6 +10,8 @@ export abstract class AbstractCollection<E> implements Collection<E> {
   /**
    * @remarks
    *
+   * **Complexity**:
+   *
    * - Time complexity: _O_(_N_)
    * - Space complexity: _O_(_N_)
    *

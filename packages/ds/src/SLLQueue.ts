@@ -42,6 +42,8 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   /**
    * @remarks
    *
+   * **Complexity**:
+   *
    * - Time complexity: _O_(1)
    * - Space complexity: _O_(1)
    */
@@ -53,6 +55,8 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
 
   /**
    * @remarks
+   *
+   * **Complexity**:
    *
    * - Time complexity: _O_(1)
    * - Space complexity: _O_(1)
@@ -72,6 +76,8 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
 
   /**
    * @remarks
+   *
+   * **Complexity**:
    *
    * - Time complexity: _O_(1)
    * - Space complexity: _O_(1)
@@ -93,6 +99,8 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
 
   /**
    * @remarks
+   *
+   * **Complexity**:
    *
    * - Time complexity: _O_(1)
    * - Space complexity: _O_(1)
