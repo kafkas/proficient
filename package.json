@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "npx lerna run compile",
+    "docs": "cd scripts && sh docs.sh",
     "format": "prettier --write \"./packages/**/{src,test}/**/*.{ts,js}\"",
     "format-check": "prettier --check \"./packages/**/{src,test}/**/*.{ts,js}\"",
     "lint": "npx eslint . --ext .ts --ignore-pattern \"packages/**/lib\""
