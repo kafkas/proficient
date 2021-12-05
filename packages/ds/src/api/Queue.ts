@@ -11,18 +11,21 @@ export interface Queue<E> extends Collection<E> {
   /**
    * Removes an item from the queue.
    *
-   * @throws If the queue is empty. TODO
-   *
    * @returns The dequeued item.
+   *
+   * @throws {@link EmptyCollectionError}
+   * Thrown if the queue is empty.
    */
   dequeue(): E;
 
   /**
-   * Retrieves, but does not remove, the head of this queue.
+   * Retrieves, but does not remove, the head of this queue i.e. then item that will be
+   * removed if `dequeue()` is called.
    *
-   * @throws If the queue is empty. TODO
+   * @returns The head element.
    *
-   * @returns The head element of the queue.
+   * @throws {@link EmptyCollectionError}
+   * Thrown if the queue is empty.
    */
   peek(): E;
 }

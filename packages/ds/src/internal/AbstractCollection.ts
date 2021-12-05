@@ -8,6 +8,8 @@ export abstract class AbstractCollection<E> implements Collection<E> {
   }
 
   /**
+   * Converts the collection into a plain array.
+   *
    * @remarks
    *
    * **Complexity**:

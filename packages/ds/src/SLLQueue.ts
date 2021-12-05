@@ -54,6 +54,8 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   }
 
   /**
+   * Pushes an item to the queue.
+   *
    * @remarks
    *
    * **Complexity**:
@@ -75,12 +77,18 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   }
 
   /**
+   * Removes an item from the queue.
+   *
    * @remarks
    *
    * **Complexity**:
    *
    * - Time complexity: _O_(1)
    * - Space complexity: _O_(1)
+   *
+   * @returns The dequeued item.
+   *
+   * @throws {@link EmptyCollectionError} Thrown if the queue is empty.
    */
   public dequeue(): E {
     this.#validateQueueIsNotEmpty();
@@ -98,12 +106,19 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   }
 
   /**
+   * Retrieves, but does not remove, the head of this queue i.e. then item that will be
+   * removed if `dequeue()` is called.
+   *
    * @remarks
    *
    * **Complexity**:
    *
    * - Time complexity: _O_(1)
    * - Space complexity: _O_(1)
+   *
+   * @returns The head element.
+   *
+   * @throws {@link EmptyCollectionError} Thrown if the queue is empty.
    */
   public peek(): E {
     this.#validateQueueIsNotEmpty();
