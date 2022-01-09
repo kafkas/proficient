@@ -1,6 +1,6 @@
 import type { Collection } from '../api';
-import { EmptyCollectionError } from '../internal/EmptyCollectionError';
-import { ImplementationError } from '../internal/ImplementationError';
+import { EmptyCollectionError } from '../EmptyCollectionError';
+import { ImplementationError } from '../ImplementationError';
 
 export abstract class AbstractCollection<E> implements Collection<E> {
   public get isEmpty(): boolean {
