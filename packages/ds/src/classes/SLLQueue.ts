@@ -1,5 +1,5 @@
-import type { Queue } from './api';
-import { AbstractCollection } from './internal/AbstractCollection';
+import type { Queue } from '../interfaces';
+import { AbstractCollection } from '../internal/AbstractCollection';
 
 class SLLNode<E> {
   public next: SLLNode<E> | null;

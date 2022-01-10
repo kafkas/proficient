@@ -1,4 +1,3 @@
-export * from './api';
-export { EmptyCollectionError } from './EmptyCollectionError';
-export { ImplementationError } from './ImplementationError';
-export { SLLQueue } from './SLLQueue';
+export * from './classes';
+export * from './errors';
+export * from './interfaces';
