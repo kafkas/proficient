@@ -21,10 +21,6 @@
         <img src="https://img.shields.io/npm/dm/@proficient/util" /></a>
     <a href="https://" alt="Types">
         <img src="https://img.shields.io/npm/types/@proficient/util" /></a>
-    <a href="https://github.com/kafkas/proficient" alt="Activity">
-        <img src="https://img.shields.io/github/commit-activity/m/kafkas/proficient" /></a>
-    <a href="https://" alt="Last Commit">
-        <img src="https://img.shields.io/github/last-commit/kafkas/proficient" /></a>
     <a href="https://lerna.js.org/" alt="Framework">
         <img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" /></a>
     <a href="https://github.com/kafkas/proficient">
