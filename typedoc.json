@@ -1,0 +1,6 @@
+{
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true
+}
