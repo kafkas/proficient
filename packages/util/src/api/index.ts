@@ -1,2 +1,3 @@
-export { registerInterval } from './registerInterval';
-export { sleep } from './sleep';
+export * from './makeRetriable';
+export * from './registerInterval';
+export * from './sleep';
