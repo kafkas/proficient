@@ -1,4 +1,6 @@
-# Proficient
+<h1 align="center">
+    Proficient
+</h1>
 
 <p align="center">
     High-quality and essential TypeScript data structures and utilities.
