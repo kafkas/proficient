@@ -48,13 +48,17 @@ yarn add -E @proficient/ds
 
 ## [API](https://kafkas.github.io/proficient/ds)
 
-### [FrequencyTable](https://kafkas.github.io/proficient/ds/0.2/classes/FrequencyTable.html)
+### [FrequencyTable](https://kafkas.github.io/proficient/ds/0.3/classes/FrequencyTable.html)
 
 An object that can be used to efficiently store and manage the frequencies of the specified keys.
 
-### [SLLQueue](https://kafkas.github.io/proficient/ds/0.2/classes/SLLQueue.html)
+### [SLLQueue](https://kafkas.github.io/proficient/ds/0.3/classes/SLLQueue.html)
 
 A FIFO queue implemented with a singly-linked list. Items are enqueued from the top and dequeued from the bottom.
+
+### [StringBuilder](https://kafkas.github.io/proficient/ds/0.3/classes/StringBuilder.html)
+
+An object that represents a mutable sequence of characters.
 
 ## Upgrading
 
