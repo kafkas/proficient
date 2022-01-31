@@ -1,4 +1,4 @@
-import { SLLQueue, EmptyCollectionError } from '../src';
+import { SLLQueue, NoSuchElementError } from '../src';
 
 describe('SLLQueue', () => {
   describe('on initialization', () => {
@@ -14,14 +14,14 @@ describe('SLLQueue', () => {
       expect(q.count).toBe(0);
     });
 
-    test('throws EmptyCollectionError when dequeued', () => {
+    test('throws NoSuchElementError when dequeued', () => {
       const q = new SLLQueue<number>();
-      expect(() => q.dequeue()).toThrow(EmptyCollectionError);
+      expect(() => q.dequeue()).toThrow(NoSuchElementError);
     });
 
-    test('throws EmptyCollectionError when peeked', () => {
+    test('throws NoSuchElementError when peeked', () => {
       const q = new SLLQueue<number>();
-      expect(() => q.peek()).toThrow(EmptyCollectionError);
+      expect(() => q.peek()).toThrow(NoSuchElementError);
     });
 
     test('converts to empty array', () => {

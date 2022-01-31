@@ -13,7 +13,7 @@ export interface Queue<E> extends Collection<E> {
    *
    * @returns The dequeued item.
    *
-   * @throws {@link EmptyCollectionError}
+   * @throws {@link NoSuchElementError}
    * Thrown if the queue is empty.
    */
   dequeue(): E;
@@ -24,7 +24,7 @@ export interface Queue<E> extends Collection<E> {
    *
    * @returns The head element.
    *
-   * @throws {@link EmptyCollectionError}
+   * @throws {@link NoSuchElementError}
    * Thrown if the queue is empty.
    */
   peek(): E;
