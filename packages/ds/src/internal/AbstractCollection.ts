@@ -1,5 +1,5 @@
 import type { Collection } from '../interfaces';
-import { EmptyCollectionError, ImplementationError } from '../errors';
+import { NoSuchElementError, ImplementationError } from '../errors';
 
 export abstract class AbstractCollection<E> implements Collection<E> {
   public get isEmpty(): boolean {
@@ -31,8 +31,8 @@ export abstract class AbstractCollection<E> implements Collection<E> {
     return arr;
   }
 
-  protected throwEmptyCollectionError(): void {
-    throw new EmptyCollectionError();
+  protected throwNoSuchElementError(): void {
+    throw new NoSuchElementError();
   }
 
   protected throwImplementationError(): void {

@@ -88,7 +88,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
    *
    * @returns The dequeued item.
    *
-   * @throws {@link EmptyCollectionError} Thrown if the queue is empty.
+   * @throws {@link NoSuchElementError} Thrown if the queue is empty.
    */
   public dequeue(): E {
     this.#validateQueueIsNotEmpty();
@@ -118,7 +118,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
    *
    * @returns The head element.
    *
-   * @throws {@link EmptyCollectionError} Thrown if the queue is empty.
+   * @throws {@link NoSuchElementError} Thrown if the queue is empty.
    */
   public peek(): E {
     this.#validateQueueIsNotEmpty();
@@ -128,7 +128,7 @@ export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
 
   #validateQueueIsNotEmpty(): void {
     if (this.isEmpty) {
-      this.throwEmptyCollectionError();
+      this.throwNoSuchElementError();
     }
   }
 }
