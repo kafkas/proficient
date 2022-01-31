@@ -34,4 +34,5 @@ This site contains the full API reference and documentation for each version of 
 ### Versions
 
 
+- [0.3](./0.3)
 - [0.2](./0.2)
