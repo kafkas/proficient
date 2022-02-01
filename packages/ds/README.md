@@ -54,7 +54,7 @@ An object that can be used to efficiently store and manage the frequencies of th
 
 ### [SLLQueue](https://kafkas.github.io/proficient/ds/0.3/classes/SLLQueue.html)
 
-A FIFO queue implemented with a singly-linked list. Items are enqueued from the top and dequeued from the bottom.
+A FIFO queue implemented with a singly-linked list.
 
 ### [StringBuilder](https://kafkas.github.io/proficient/ds/0.3/classes/StringBuilder.html)
 
