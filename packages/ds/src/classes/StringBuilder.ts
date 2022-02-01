@@ -139,7 +139,7 @@ export class StringBuilder {
    * **Complexity**:
    *
    * - Time complexity: _O_(_N_ + _S_)
-   * - Space complexity: _O_(_N_)
+   * - Space complexity: _O_(1) (amortized)
    *
    * where:
    *
@@ -150,17 +150,16 @@ export class StringBuilder {
     this.#validateIndexEndIncluded(index);
     if (seq === '') return this;
     const newSeqChars = this.#getCharsOf(seq);
-    const chars = new Array<string>(this.#chars.length + newSeqChars.length);
-    for (let i = 0; i < chars.length; i++) {
-      if (i < index) {
-        chars[i] = this.#chars[i];
-      } else if (i >= index && i < index + newSeqChars.length) {
-        chars[i] = newSeqChars[i - index];
-      } else {
-        chars[i] = this.#chars[i - newSeqChars.length];
-      }
+    // Resize the chars array
+    this.#chars[this.count + newSeqChars.length - 1] = '';
+    // Shift every char at i >= index to the right by newSeqChars.length
+    for (let i = this.count - newSeqChars.length - 1; i >= index; i--) {
+      this.#chars[i + newSeqChars.length] = this.#chars[i];
     }
-    this.#chars = chars;
+    // Add each new char to the appropriate location
+    for (let i = index; i < index + newSeqChars.length; i++) {
+      this.#chars[i] = newSeqChars[i - index];
+    }
     return this;
   }
 
@@ -187,8 +186,8 @@ export class StringBuilder {
    *
    * **Complexity**:
    *
-   * - Time complexity: _O_(_1_)
-   * - Space complexity: _O_(_1_)
+   * - Time complexity: _O_(1)
+   * - Space complexity: _O_(1)
    */
   #getCharsOf(seq: CharSequenceLike): string | string[] {
     if (typeof seq === 'string') return seq;
