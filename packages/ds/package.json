@@ -1,6 +1,6 @@
 {
   "name": "@proficient/ds",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "High-quality and essential Typescript data structures",
   "keywords": [
     "typescript",
