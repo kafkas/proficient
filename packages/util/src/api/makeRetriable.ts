@@ -40,6 +40,9 @@ export type RetriableResult<T> = {
     }
 );
 
+/**
+ * A type representing the retriable version of a given function.
+ */
 export type RetriableVersionOf<F extends (...args: any[]) => any> = (
   ...args: Parameters<F>
 ) => Promise<RetriableResult<ReturnType<F>>>;

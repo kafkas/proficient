@@ -1,4 +1,4 @@
-import type { CharSequenceLike } from '../internal';
+import type { CharSequenceLike } from '../types';
 import { stringify } from '../internal/util';
 import { IllegalArgumentError, StringIndexOutOfBoundsError } from '../errors';
 
@@ -9,7 +9,7 @@ export class StringBuilder {
   #chars: string[];
 
   /**
-   * Character count.
+   * The number of characters in this sequence.
    */
   public get count(): number {
     return this.#chars.length;
@@ -73,7 +73,7 @@ export class StringBuilder {
    *
    * where:
    *
-   * - _S_: character count of the new sequence to be appended
+   * - _N_: character count of the sequence
    */
   public deleteCharAt(index: number): this {
     this.#validateIndex(index);
@@ -93,7 +93,7 @@ export class StringBuilder {
    *
    * where:
    *
-   * - _S_: character count of the new sequence to be appended
+   * - _N_: character count of the sequence
    */
   public delete(startIndex: number, endIndex: number): this {
     this.#validateIndex(startIndex);
@@ -122,32 +122,24 @@ export class StringBuilder {
    * - _S_: character count of the new sequence to be appended
    */
   public append(seq: CharSequenceLike): this {
-    if (seq !== '') {
-      let chars: string | string[] | undefined;
-      if (typeof seq === 'string') {
-        chars = seq;
-      } else if (seq instanceof StringBuilder) {
-        chars = seq.#chars;
-      } else {
-        chars = stringify(seq);
-      }
-      for (let i = 0; i < chars.length; i++) {
-        const char = chars[i];
-        this.#chars.push(char);
-      }
+    if (seq === '') return this;
+    const newSeqChars = this.#getCharsOf(seq);
+    for (let i = 0; i < newSeqChars.length; i++) {
+      const char = newSeqChars[i];
+      this.#chars.push(char);
     }
     return this;
   }
 
   /**
-   * Appends a string of characters to the sequence.
+   * Inserts a sequence of characters into the sequence at the specified index.
    *
    * @remarks
    *
    * **Complexity**:
    *
    * - Time complexity: _O_(_N_ + _S_)
-   * - Space complexity: _O_(_N_ + _S_)
+   * - Space complexity: _O_(_N_)
    *
    * where:
    *
@@ -190,12 +182,22 @@ export class StringBuilder {
     }
   }
 
-  #getCharsOf(seq: CharSequenceLike): string[] {
-    return seq instanceof StringBuilder ? seq.#chars : stringify(seq).split('');
+  /**
+   * @remarks
+   *
+   * **Complexity**:
+   *
+   * - Time complexity: _O_(_1_)
+   * - Space complexity: _O_(_1_)
+   */
+  #getCharsOf(seq: CharSequenceLike): string | string[] {
+    if (typeof seq === 'string') return seq;
+    if (seq instanceof StringBuilder) return seq.#chars;
+    return stringify(seq);
   }
 
   /**
-   * Appends a string of characters to the sequence.
+   * Builds and returns the sequence represented by this object.
    *
    * @remarks
    *

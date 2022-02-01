@@ -1,4 +1,4 @@
-import type { Queue } from '../interfaces';
+import type { Queue } from '../types';
 import { AbstractCollection } from '../internal/AbstractCollection';
 
 class SLLNode<E> {
@@ -10,8 +10,7 @@ class SLLNode<E> {
 }
 
 /**
- * A FIFO queue implemented with a singly-linked list. Items are enqueued from the top and
- * dequeued from the bottom.
+ * A FIFO queue implemented with a singly-linked list.
  */
 export class SLLQueue<E> extends AbstractCollection<E> implements Queue<E> {
   #top: SLLNode<E> | null;

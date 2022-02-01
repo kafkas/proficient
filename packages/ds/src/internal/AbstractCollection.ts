@@ -1,4 +1,4 @@
-import type { Collection } from '../interfaces';
+import type { Collection } from '../types';
 import { NoSuchElementError, ImplementationError } from '../errors';
 
 export abstract class AbstractCollection<E> implements Collection<E> {

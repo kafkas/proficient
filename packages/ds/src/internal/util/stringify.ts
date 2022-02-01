@@ -1,4 +1,4 @@
-import type { CharSequenceLike } from '..';
+import type { CharSequenceLike } from '../../types';
 
 export function stringify(seq: CharSequenceLike): string {
   switch (typeof seq) {

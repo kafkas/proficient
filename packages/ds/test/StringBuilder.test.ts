@@ -1,4 +1,4 @@
-import type { CharSequenceLike } from '../src/internal';
+import type { CharSequenceLike } from '../src/types';
 import { StringBuilder } from '../src/classes/StringBuilder';
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
