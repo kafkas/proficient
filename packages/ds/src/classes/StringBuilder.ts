@@ -73,7 +73,7 @@ export class StringBuilder {
    *
    * where:
    *
-   * - _N_: character count of the sequence
+   * - _N_: character count of this sequence
    */
   public deleteCharAt(index: number): this {
     this.#validateIndex(index);
@@ -93,7 +93,7 @@ export class StringBuilder {
    *
    * where:
    *
-   * - _N_: character count of the sequence
+   * - _N_: character count of this sequence
    */
   public delete(startIndex: number, endIndex: number): this {
     this.#validateIndex(startIndex);
@@ -108,7 +108,7 @@ export class StringBuilder {
   }
 
   /**
-   * Appends a string of characters to the sequence.
+   * Appends a sequence of characters to this sequence.
    *
    * @remarks
    *
@@ -132,7 +132,7 @@ export class StringBuilder {
   }
 
   /**
-   * Inserts a sequence of characters into the sequence at the specified index.
+   * Inserts a sequence of characters into this sequence at the specified index.
    *
    * @remarks
    *
@@ -143,7 +143,7 @@ export class StringBuilder {
    *
    * where:
    *
-   * - _N_: character count of the sequence
+   * - _N_: character count of this sequence
    * - _S_: character count of the new sequence to be inserted
    */
   public insert(index: number, seq: CharSequenceLike): this {
@@ -197,7 +197,7 @@ export class StringBuilder {
   }
 
   /**
-   * Builds and returns the sequence represented by this object.
+   * Builds and returns the character sequence represented by this object.
    *
    * @remarks
    *
@@ -208,7 +208,7 @@ export class StringBuilder {
    *
    * where:
    *
-   * - _N_: character count of the sequence
+   * - _N_: character count of this sequence
    */
   public toString(): string {
     return this.#chars.join('');
